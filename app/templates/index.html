@@ -15,8 +15,10 @@
         <button type="submit">Search</button>
     </form>
 
-    {% if search_query %}
-        <p>Search Query: {{ search_query }}</p>
+    {% if output %}
+        {% for word in output %}
+            <p>{{ word }}</p>
+        {% endfor %}
     {% endif %}
 </body>
 </html>
